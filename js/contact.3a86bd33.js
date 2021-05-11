@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["contact"],{b8fa:function(t,a,c){"use strict";c.r(a);var n=c("7a23"),e=Object(n["f"])("div",{class:"contact"},[Object(n["f"])("h1",null,"This is a Contact Page")],-1);function o(t,a,c,o,l,r){var s=Object(n["s"])("HelloWorld");return Object(n["o"])(),Object(n["d"])(n["a"],null,[e,Object(n["f"])(s)],64)}var l=c("fdab"),r={name:"Contact",components:{HelloWorld:l["a"]}};r.render=o;a["default"]=r}}]);
+//# sourceMappingURL=contact.3a86bd33.js.map
