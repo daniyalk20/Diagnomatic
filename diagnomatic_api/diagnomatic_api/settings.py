@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'main_api'
+    'rest_framework_simplejwt.token_blacklist',
+    'corsheaders',
+    'main_api',
+    'user_auth'
 ]
 
 MIDDLEWARE = [
