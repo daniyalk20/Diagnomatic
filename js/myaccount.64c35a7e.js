@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["myaccount"],{fc1b:function(c,n,t){"use strict";t.r(n);var e=t("7a23"),a={class:"container"},o=Object(e["g"])("h1",{class:"display-4"},"My Account",-1);function s(c,n,t,s,r,u){return Object(e["p"])(),Object(e["d"])("div",a,[o])}var r={name:"MyAccount",component:{}};r.render=s;n["default"]=r}}]);
+//# sourceMappingURL=myaccount.64c35a7e.js.map
