@@ -2,26 +2,17 @@
 <div class="main-container">
   <div class="login-form">
     <form>
-        <h2 class="text-center">Log in</h2>       
+        <h2 class="text-center">Forgot Password</h2>       
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Username" v-model="username" required="required">
+            <input type="email" class="form-control" placeholder="Email" v-model="username" required="required">
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" v-model="password" required="required">
+            <button class="btn btn-block login-btn" @click="loginUser">Send Password</button>
         </div>
-        <div class="form-group">
-            <button class="btn btn-block login-btn" @click="loginUser">Log in</button>
-        </div>
-        <div class="clearfix">
-            <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
+        <div class="text-center">
+            <router-link to="Login">Login</router-link> | <router-link to="SignUp">Sign Up</router-link>
         </div>      
-        <div class="text-center mt-1">
-            <router-link href="#" to="ForgotPassword">Forgot Password?</router-link>
-        </div>
-        <div class="text-center mt-1">
-            <p>Don't have an Account? <router-link href="#" to="SignUp">Sign Up</router-link></p>
-        </div>
-        <p v-if='isWrong' class="danger">Username or Password is incorrect</p>
+        <p v-if='isWrong'>Email not registered!</p>
     </form>
 </div>
 </div>
@@ -29,26 +20,25 @@
 
 <script>
 export default {
-  name: 'Login',
+  name: 'ForgotPassword',
   components: {
 
   },
   data() {
     return {
-    username: '',
-    password:'',
+    email: '',
     isWrong: false
     };
   },
   methods: {
     loginUser: function() {
-      this.$store.dispatch('loginUser', {
+      this.$store.dispatch('forgotpassword', {
         username: this.username,
         password: this.password
       })
       .then(() => {
         this.isWrong = false
-        this.$router.push({ name: 'MyAccount' })
+        this.$router.push({ name: 'Login' })
       })
       .catch(err => {
         console.log(err)

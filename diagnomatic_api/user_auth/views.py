@@ -9,6 +9,7 @@ import json
 from django.contrib.auth.hashers import make_password
 from django.db.utils import IntegrityError
 
+# please visit https://github.com/nishant-boro/django_rest-vuejs-auth/
 # Create your views here.
 @csrf_exempt
 @api_view(['GET', 'POST'])

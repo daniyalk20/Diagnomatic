@@ -2,7 +2,16 @@
 <div class="main-container">
   <div class="login-form">
     <form>
-        <h2 class="text-center">Log in</h2>       
+        <h2 class="text-center">Create an Account</h2>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="First Name" v-model="fname" required="required">
+        </div>  
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Last Name" v-model="lname" required="required">
+        </div>   
+        <div class="form-group">
+            <input type="email" class="form-control" placeholder="johndoe@example.com" v-model="email" required="required">
+        </div>      
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Username" v-model="username" required="required">
         </div>
@@ -10,18 +19,19 @@
             <input type="password" class="form-control" placeholder="Password" v-model="password" required="required">
         </div>
         <div class="form-group">
-            <button class="btn btn-block login-btn" @click="loginUser">Log in</button>
+            <input type="password" class="form-control" placeholder="Repeat Password" v-model="rpassword" required="required">
         </div>
         <div class="clearfix">
             <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
-        </div>      
-        <div class="text-center mt-1">
-            <router-link href="#" to="ForgotPassword">Forgot Password?</router-link>
+        </div>  
+        <div class="form-group">
+            <button class="btn btn-block login-btn" @click="loginUser">Sign Up</button>
+        </div>    
+        <div class="text-center">
+            <p>Already have an account? 
+            <router-link href="#" to="Login">Login</router-link></p>
         </div>
-        <div class="text-center mt-1">
-            <p>Don't have an Account? <router-link href="#" to="SignUp">Sign Up</router-link></p>
-        </div>
-        <p v-if='isWrong' class="danger">Username or Password is incorrect</p>
+        <p v-if='isWrong' class="danger">Alert Message!</p>
     </form>
 </div>
 </div>
@@ -29,26 +39,33 @@
 
 <script>
 export default {
-  name: 'Login',
+  name: 'SignUp',
   components: {
 
   },
   data() {
     return {
+      fname: '',
+      lname: '',
+      email: '',
     username: '',
     password:'',
+    rpassword: '',
     isWrong: false
     };
   },
   methods: {
     loginUser: function() {
-      this.$store.dispatch('loginUser', {
+      this.$store.dispatch('signUp', {
+        fname: this.fname,
+        lname: this.lname,
+        email: this.email,
         username: this.username,
         password: this.password
       })
       .then(() => {
         this.isWrong = false
-        this.$router.push({ name: 'MyAccount' })
+        this.$router.push({ name: 'Login' })
       })
       .catch(err => {
         console.log(err)
