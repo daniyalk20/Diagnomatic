@@ -1,0 +1,30 @@
+Folder PATH listing for volume Local Disk
+Volume serial number is 4E06-7D13
++---diagnomatic_api
+|   +---detector
+|   +---diagnomatic_api     
+|   +---pneumonia
+|
+\---diagnomatic_vue
+    |   
+    +---dist
+    +---node_modules                 
+    +---public
+    |       
+    \---src
+        |   App.vue
+        |   main.js
+        |   
+        +---assets
+        +---components
+        +---router 
+        +---store
+        \---views
+                Contact.vue
+                ForgotPassword.vue
+                Home.vue
+                Login.vue
+                MyAccount.vue
+                Pneumonia.vue
+                SignUp.vue
+                

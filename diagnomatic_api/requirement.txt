@@ -1,0 +1,6 @@
+pip install opencv-python
+pip install django
+pip install djangorestframework
+pip install keras
+pip install tensorflow
+pip install django-cors-middleware
