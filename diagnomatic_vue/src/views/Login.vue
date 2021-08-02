@@ -14,10 +14,14 @@
         </div>
         <div class="clearfix">
             <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
-            <a href="#" class="float-right">Forgot Password?</a>
         </div>      
-        
-    <p class="text-center"><a href="#">Create an Account</a></p>  
+        <div class="text-center mt-1">
+            <router-link href="#" to="ForgotPassword">Forgot Password?</router-link>
+        </div>
+        <div class="text-center mt-1">
+            <p>Don't have an Account? <router-link href="#" to="SignUp">Sign Up</router-link></p>
+        </div>
+        <p v-if='isWrong' class="danger">Username or Password is incorrect</p>
     </form>
 </div>
 </div>
@@ -27,17 +31,17 @@
 export default {
   name: 'Login',
   components: {
+
   },
   data() {
     return {
     username: '',
     password:'',
-    isWrong: ''
+    isWrong: false
     };
   },
   methods: {
     loginUser: function() {
-      alert('I am called');
       this.$store.dispatch('loginUser', {
         username: this.username,
         password: this.password
@@ -54,6 +58,8 @@ export default {
   }
 }
 </script>
+
+
 
 <style scoped>
 .main-container{

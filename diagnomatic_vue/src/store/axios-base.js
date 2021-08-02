@@ -1,5 +1,5 @@
 import axios from 'axios'
-import store from '../store'
+import store from '.'
 const APIUrl = 'http://127.0.0.1:8000/'
 
 const axiosBase = axios.create({
