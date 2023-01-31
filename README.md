@@ -1,4 +1,4 @@
-# Diagnomatic
+# DIAGNOMATIC: DISEASE DETECTION AND VISUALIZATION USING MEDICAL IMAGING AND DEEP LEARNING
 ## Abstract
 Pneumonia is particularly a difficult disease to be diagnosed because it could be
 caused by any number of pathogens that lead to a bacterial, fungal or viral infection
