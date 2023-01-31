@@ -1,5 +1,31 @@
 # Diagnomatic
-Final Year Project
+## Abstract
+Pneumonia is particularly a difficult disease to be diagnosed because it could be
+caused by any number of pathogens that lead to a bacterial, fungal or viral infection
+in the lungs and it can be contracted almost anywhere, including in hospitals. Chest
+X-rays have been considered the best tool to detect any form of pneumonia, but it's
+not perfect. Pneumonia can appear similar to other conditions on scan, and imaging
+cannot identify the infectious pathogens, making the diagnosis difficult via x-ray.
+Physicians must gather a complete picture of the patient's condition to make their
+best and most accurate diagnosis.
+The work portrayed targets automating entire procedure of diagnosing the
+Pneumonia and visualizing it using a web-app with a high accuracy of 92% which
+could make it easier for medical practitioners and patients to understand the area
+diseased in the given X-ray. The model uses X-ray images to predict the actual
+diseased location by the use of widely used Deep Learning Algorithms such as CNN
+(Convolutional Neural Network) and Data Augmentation.
+The deep learning model is trained using 5,863 JPEG images extracted from
+retrospective cohorts of pediatric patients of one to five years old from X-Ray
+imaging was performed as part of patients' routine clinical care.
+The model is trained using the Kaggle’s cloud kernel and then saved in H5 and json
+format which is later used by the Django framework to generate output is the newly
+inputted images into the web-app by end user via frontend that is implemented using
+the vue.js framework.
+This project uses python 3.x libraries TensorFlow and Keras to implement Data
+Augmentation and CNN Algorithms. To perform other visualization, mathematical
+and, statistical operations it used NumPy, Pandas, Seaborn, Scikit Learn and
+OpenCV libraries. Other than these it uses Django and Vue.js to implement Backend
+and frontend of the web-app respectively.
 
 # Dependency 
 1. Install Virtual Environment
